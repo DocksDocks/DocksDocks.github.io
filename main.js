@@ -27,6 +27,8 @@ function switchTheme(e) {
 
 window.onload = function () {
     const toggleSwitch = document.getElementById('darkmode-toggle');
+    toggleSwitch.checked = true; // starts checked
+    switchTheme({ target: toggleSwitch });
     document.getElementById("sun").style.transition = "all 0.02s";
     document.getElementById("moon").style.transition = "all 0.02s";
     console.log("hello")
