@@ -12,7 +12,7 @@
     --mainLinkColor-dark:rgb(30, 190,214);
     --mainBorderColor-dark:#2b3031;
     --mainBgColor-dark:#131415;
-    
+
 
     --mainTextColor:var(--mainTextColor-dark);
     --secondaryTextColor:var(--secondaryTextColor-dark);
@@ -27,11 +27,11 @@
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
-    
+
 }
 
 body{
-    background-color: var(--mainBgColor);            
+    background-color: var(--mainBgColor);
 }
 
 p, span, li{
@@ -191,8 +191,9 @@ li{
     border-radius: 20px;
     box-shadow: inset 0px 0.5px 1.5px rgba(0,0,0,0.4), inset 0px -0.5px 1.5px rgba(255,255,255,0.4);
     cursor: pointer;
-  }
-  #label-toggle:after {
+}
+
+#label-toggle:after {
     content: "";
     width:18px;
     height: 18px;
@@ -202,39 +203,57 @@ li{
     background: linear-gradient(180deg,#ffcc89,#d8860b);
     border-radius: 18px;
     box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2);
-  }
+}
 
-  #darkmode-toggle:checked + #label-toggle:after {
+#darkmode-toggle:checked + #label-toggle:after {
     left:49px;
     transform: translateX(-100%);
     background: linear-gradient(180deg,#777,#3a3a3a);
-  }
+}
 
-  #label-toggle:active:after{ 
-    width: 26px; 
-  }
+#label-toggle:active:after{
+    width: 26px;
+}
 
-  #darkmode-toggle {
+#darkmode-toggle {
     width: 0;
     height: 0;
     visibility: hidden;
-  }
+}
 
-  #darkmode-toggle:checked + #label-toggle {
+#darkmode-toggle:checked + #label-toggle {
     background: #242424;
-  }
+}
 
-  #label-toggle, #label-toggle:after {
+#label-toggle, #label-toggle:after {
     transition: 0.3s
-  }
+}
 
 
-  .disabled_icon{
+.disabled_icon{
     visibility: hidden;
-  }
+}
 
-  .enabled_icon{
+.enabled_icon{
     visibility: visible;
-  }
+}
 
- 
+.toggle-button {
+    background: none;
+    border: 1px solid var(--mainBorderColor);
+    color: var(--mainTextColor);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Readex Pro';
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: var(--mainBorderColor);
+}
+
+#label-toggle {
+    margin-left: 5px;
+}
