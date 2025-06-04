@@ -27,11 +27,12 @@
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
-
+    transition: color 0.3s ease-in-out;
 }
 
 body{
     background-color: var(--mainBgColor);
+    transition: background-color 0.3s ease-in-out;
 }
 
 p, span, li{
@@ -66,7 +67,7 @@ li{
     gap: 4em;
 }
 
-#bio, a{
+#bio, #bio a{
     font-weight: 300;
 }
 
@@ -97,13 +98,12 @@ li{
     font-weight: 300;
     color: var(--secondaryTextColor);
     font-size: 0.9em;
-    transition: 0.3s;
+    transition: 0.3s color;
 }
 
 #socials--list a:hover{
     font-weight: 100;
     color: var(--mainLinkColor);
-    font-size: 0.9em;
 }
 
 #qualifications--list{
@@ -122,23 +122,23 @@ li{
     border-radius: 5px;
     padding: 0.5em 1em;
     align-items: center;
+    transition: border-color 0.3s ease-in-out;
 }
 
 .card--project{
     padding-top: 1em;
     padding-bottom: 1em;
     border-top: 1px solid var(--mainBorderColor);
+    transition: border-top-color 0.3s ease-in-out;
 }
 
 .card--project a{
     color: var(--mainTextColor);
-
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .card--project a:hover{
     color: rgb(30, 190,214);
-
 }
 
 .card--work-history{
@@ -146,11 +146,13 @@ li{
     margin-top: 3em;
     margin-bottom: 3em;
     padding-left: 2em;
+    transition: border-left-color 0.3s ease-in-out;
 }
 
 .line-break{
     background-color: var(--mainBorderColor);
     height: 1px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 
@@ -182,78 +184,34 @@ li{
     }
 }
 
-#label-toggle {
-    width:50px;
-    height:20px;
-    position: relative;
-    display: block;
-    background: #ebebeb;
-    border-radius: 20px;
-    box-shadow: inset 0px 0.5px 1.5px rgba(0,0,0,0.4), inset 0px -0.5px 1.5px rgba(255,255,255,0.4);
-    cursor: pointer;
-}
-
-#label-toggle:after {
-    content: "";
-    width:18px;
-    height: 18px;
-    position: absolute;
-    top:1px;
-    left:1px;
-    background: linear-gradient(180deg,#ffcc89,#d8860b);
-    border-radius: 18px;
-    box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2);
-}
-
-#darkmode-toggle:checked + #label-toggle:after {
-    left:49px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
-}
-
-#label-toggle:active:after{
-    width: 26px;
-}
-
-#darkmode-toggle {
-    width: 0;
-    height: 0;
+.disabled_icon {
+    opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+    max-width: 0;
+    display: inline-block;
 }
 
-#darkmode-toggle:checked + #label-toggle {
-    background: #242424;
-}
-
-#label-toggle, #label-toggle:after {
-    transition: 0.3s
-}
-
-
-.disabled_icon{
-    visibility: hidden;
-}
-
-.enabled_icon{
+.enabled_icon {
+    opacity: 1;
     visibility: visible;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 100px;
+    display: inline-block;
 }
+
 
 .toggle-button {
     background: none;
     border: 1px solid var(--mainBorderColor);
-    color: var(--mainTextColor);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Readex Pro';
     font-size: 0.9em;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .toggle-button:hover {
     background-color: var(--mainBorderColor);
-}
-
-#label-toggle {
-    margin-left: 5px;
 }
