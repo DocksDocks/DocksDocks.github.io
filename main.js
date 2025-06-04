@@ -27,7 +27,7 @@ const translations = {
         pageTitle: "Eduardo Marquez",
         metaOgDescription: "Eduardo Marquez is a Software developer, whom started developing in 2019. He has experience with both backend and frontend developing.",
         metaDescription: "Eduardo Marquez is a Software developer, whom started developing in 2019. He has experience with both backend and frontend developing.",
-        bio: "Backend Developer, DevOps at <a href='[https://www.linkedin.com/company/moonshot-robots/](https://www.linkedin.com/company/moonshot-robots/)' target='_blank'>Moonshot Robots</a>.<br>Bachelor of Computer Science, Universidade Anhembi Morumbi, Graduated in 2022.",
+        bio: "Backend Developer, DevOps at <a href='https://www.linkedin.com/company/moonshot-robots/' target='_blank'>Moonshot Robots</a>.<br>Bachelor of Computer Science, Universidade Anhembi Morumbi, Graduated in 2022.",
         linkedin: "Linkedin",
         github: "Github",
         downloadResume: "Download Resume",
@@ -73,16 +73,16 @@ const translations = {
         personalProjects: "Personal Projects",
         project1Name: "‍💻 dropcode",
         project1Dates: "July/2023 – October/2023",
-        project1Desc1: "The <a href='[https://dropcode.vercel.app/](https://dropcode.vercel.app/)' target='_blank'><strong>dropcode</strong></a> platform was created for sharing code snippets between your friends and colleagues.",
-        project1Desc2: "Developed the platform in Next.js 13, using the new app router. <br> Deployed the platform on <a href='[https://vercel.com/](https://vercel.com/)' target='_blank'><strong>Vercel</strong></a>.",
-        project1Desc3: "An API in NodeJS was developed to facilitate interactions with the database. Fastify was used for handling routes, Prisma for simplified database management, while Zod provided secure validation of incoming data. <br> The API was deployed on <a href='[https://www.cyclic.sh/](https://www.cyclic.sh/)' target='_blank'><strong>Cyclic</strong></a>.",
-        project1Desc4: "The database was created in PostgreSQL.<br> Stored it in <a href='[https://supabase.com/](https://supabase.com/)' target='_blank'><strong>Supabase</strong></a>."
+        project1Desc1: "The <a href='https://dropcode.vercel.app/' target='_blank'><strong>dropcode</strong></a> platform was created for sharing code snippets between your friends and colleagues.",
+        project1Desc2: "Developed the platform in Next.js 13, using the new app router. <br> Deployed the platform on <a href='https://vercel.com/' target='_blank'><strong>Vercel</strong></a>.",
+        project1Desc3: "An API in NodeJS was developed to facilitate interactions with the database. Fastify was used for handling routes, Prisma for simplified database management, while Zod provided secure validation of incoming data. <br> The API was deployed on <a href='https://www.cyclic.sh/' target='_blank'><strong>Cyclic</strong></a>.",
+        project1Desc4: "The database was created in PostgreSQL.<br> Stored it in <a href='https://supabase.com/' target='_blank'><strong>Supabase</strong></a>."
     },
     pt: {
         pageTitle: "Eduardo Marquez",
         metaOgDescription: "Eduardo Marquez é um desenvolvedor de software que começou a desenvolver em 2019. Possui experiência com desenvolvimento backend e frontend.",
         metaDescription: "Eduardo Marquez é um desenvolvedor de software que começou a desenvolver em 2019. Possui experiência com desenvolvimento backend e frontend.",
-        bio: "Desenvolvedor Backend, DevOps na <a href='[https://www.linkedin.com/company/moonshot-robots/](https://www.linkedin.com/company/moonshot-robots/)' target='_blank'>Moonshot Robots</a>.<br>Bacharel em Ciência da Computação, Universidade Anhembi Morumbi, Graduado em 2022.",
+        bio: "Desenvolvedor Backend, DevOps na <a href='https://www.linkedin.com/company/moonshot-robots/' target='_blank'>Moonshot Robots</a>.<br>Bacharel em Ciência da Computação, Universidade Anhembi Morumbi, Graduado em 2022.",
         linkedin: "Linkedin",
         github: "Github",
         downloadResume: "Baixar Currículo",
@@ -128,10 +128,10 @@ const translations = {
         personalProjects: "Projetos Pessoais",
         project1Name: "‍💻 dropcode",
         project1Dates: "Julho/2023 – Outubro/2023",
-        project1Desc1: "A plataforma <a href='[https://dropcode.vercel.app/](https://dropcode.vercel.app/)' target='_blank'><strong>dropcode</strong></a> foi criada para compartilhar trechos de código entre seus amigos e colegas.",
-        project1Desc2: "Desenvolvi a plataforma em Next.js 13, usando o novo app router. <br> Deploy da plataforma na <a href='[https://vercel.com/](https://vercel.com/)' target='_blank'><strong>Vercel</strong></a>.",
-        project1Desc3: "Uma API em NodeJS foi desenvolvida para facilitar as interações com o banco de dados. Fastify foi usado para lidar com rotas, Prisma para gerenciamento simplificado do banco de dados, enquanto Zod forneceu validação segura dos dados de entrada. <br> A API teve o deploy feito na <a href='[https://www.cyclic.sh/](https://www.cyclic.sh/)' target='_blank'><strong>Cyclic</strong></a>.",
-        project1Desc4: "O banco de dados foi criado em PostgreSQL.<br> Armazenado no <a href='[https://supabase.com/](https://supabase.com/)' target='_blank'><strong>Supabase</strong></a>."
+        project1Desc1: "A plataforma <a href='https://dropcode.vercel.app/' target='_blank'><strong>dropcode</strong></a> foi criada para compartilhar trechos de código entre seus amigos e colegas.",
+        project1Desc2: "Desenvolvi a plataforma em Next.js 13, usando o novo app router. <br> Deploy da plataforma na <a href='https://vercel.com/' target='_blank'><strong>Vercel</strong></a>.",
+        project1Desc3: "Uma API em NodeJS foi desenvolvida para facilitar as interações com o banco de dados. Fastify foi usado para lidar com rotas, Prisma para gerenciamento simplificado do banco de dados, enquanto Zod forneceu validação segura dos dados de entrada. <br> A API teve o deploy feito na <a href='https://www.cyclic.sh/' target='_blank'><strong>Cyclic</strong></a>.",
+        project1Desc4: "O banco de dados foi criado em PostgreSQL.<br> Armazenado no <a href='https://supabase.com/' target='_blank'><strong>Supabase</strong></a>."
     }
 };
 
@@ -158,11 +158,18 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-translate-key]').forEach(element => {
         const key = element.getAttribute('data-translate-key');
         if (translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
+            if (element.tagName === 'A' && element.href && !element.href.startsWith(window.location.origin) && !element.href.startsWith('mailto:')) {
+                // Preserve external links
+            } else if (key === 'resumeLink' && element.tagName === 'A') {
+                 element.href = translations[lang][key];
+            }
+            else {
+                element.innerHTML = translations[lang][key];
+            }
         }
     });
     const resumeLinkElement = document.getElementById('resumeLink');
-    if (resumeLinkElement) {
+    if (resumeLinkElement && translations[lang].resumeLink) { // Check if translations[lang].resumeLink exists
         resumeLinkElement.href = translations[lang].resumeLink;
     }
     const langToggleButton = document.getElementById('language-toggle-btn');
@@ -189,7 +196,7 @@ window.onload = function () {
     if (toggleSwitch) {
         const darkModeSaved = localStorage.getItem('darkMode') === 'enabled';
         toggleSwitch.checked = darkModeSaved;
-        switchTheme({ target: toggleSwitch }); // Aplica o tema salvo ou o padrão (baseado no checked)
+        switchTheme({ target: toggleSwitch });
         setTimeout(() => {
             if (document.getElementById("sun")) document.getElementById("sun").style.transition = "all 0.02s";
             if (document.getElementById("moon")) document.getElementById("moon").style.transition = "all 0.02s";
@@ -215,35 +222,3 @@ window.onload = function () {
 
     console.log("Page loaded and initialized.");
 };
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.style.setProperty('--mainTextColor', '#fff');
-        document.documentElement.style.setProperty('--secondaryTextColor', '#adb0b1');
-        document.documentElement.style.setProperty('--mainLinkColor', 'rgb(30, 190,214)');
-        document.documentElement.style.setProperty('--mainBorderColor', '#2b3031');
-        document.documentElement.style.setProperty('--mainBgColor', '#131415');
-        if(document.getElementById("sun")) {
-            document.getElementById("sun").classList.add("disabled_icon");
-            document.getElementById("sun").classList.remove("enabled_icon");
-        }
-        if(document.getElementById("moon")) {
-            document.getElementById("moon").classList.add("enabled_icon");
-            document.getElementById("moon").classList.remove("disabled_icon");
-        }
-    } else {
-        document.documentElement.style.setProperty('--mainTextColor', '#000');
-        document.documentElement.style.setProperty('--secondaryTextColor', 'rgb(51 51 51)');
-        document.documentElement.style.setProperty('--mainLinkColor', '#0da2b8');
-        document.documentElement.style.setProperty('--mainBorderColor', 'rgb(218, 218, 218)');
-        document.documentElement.style.setProperty('--mainBgColor', 'rgb(249, 250,251)');
-        if(document.getElementById("sun")) {
-            document.getElementById("sun").classList.add("enabled_icon");
-            document.getElementById("sun").classList.remove("disabled_icon");
-        }
-        if(document.getElementById("moon")) {
-            document.getElementById("moon").classList.add("disabled_icon");
-            document.getElementById("moon").classList.remove("enabled_icon");
-        }
-    }
-}
